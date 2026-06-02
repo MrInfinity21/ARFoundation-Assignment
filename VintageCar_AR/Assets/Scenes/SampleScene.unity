@@ -634,6 +634,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1766282927
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1766282929}
+  - component: {fileID: 1766282928}
+  m_Layer: 0
+  m_Name: Experience
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1766282928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766282927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c12a08df9af7cb41b72cce4d6251368, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ARTapToPlace
+  raycastManager: {fileID: 1780591085}
+  planeManager: {fileID: 1780591084}
+  ARPrefab: {fileID: 5957907165050184675, guid: 5a26302fa0b509c4f8238bb41e0a922e, type: 3}
+--- !u!4 &1766282929
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766282927}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.35603, y: 0, z: 0.3212}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1780591081
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,6 +692,7 @@ GameObject:
   - component: {fileID: 1780591083}
   - component: {fileID: 1780591082}
   - component: {fileID: 1780591084}
+  - component: {fileID: 1780591085}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -701,7 +749,23 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_PlanePrefab: {fileID: 965910805}
-  m_DetectionMode: -1
+  m_DetectionMode: 1
+--- !u!114 &1780591085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780591081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa17d122634046b4a8e23048891fafc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.ARFoundation::UnityEngine.XR.ARFoundation.ARRaycastManager
+  <trackablesChanged>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  m_RaycastPrefab: {fileID: 0}
 --- !u!1 &1922547498
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,3 +864,4 @@ SceneRoots:
   - {fileID: 1780591083}
   - {fileID: 1189073303}
   - {fileID: 5464739322825144231}
+  - {fileID: 1766282929}
